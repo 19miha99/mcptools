@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcpdevkit"
+version = "1.0.0"
+description = "Developer toolkit for MCP servers — inspect, test, benchmark, validate, and generate documentation"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Mykhailo Andrunyk", email = "19miha99@users.noreply.github.com"}
+]
+keywords = [
+    "mcp", "model-context-protocol", "developer-tools", "cli",
+    "testing", "benchmarking", "claude", "ai", "toolkit",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+mcptools = "mcptools.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/19miha99/mcptools"
+Repository = "https://github.com/19miha99/mcptools"
+Issues = "https://github.com/19miha99/mcptools/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
